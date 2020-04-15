@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int n, quantidade;
+	float preco, total;
+
+    while(n!=0){
+		printf("Digite o numero do seu pedido e zero quando acabar;\n");
+		scanf("%d", &n);
+		if(n==0){
+			printf("O preco total e de: %.2f\n", total);
+			return(0);
+		}
+
+		printf("Digite o preco da unidade: \n");
+		scanf("%f", &preco);
+//		preco esta em %f pois esta em float
+		printf("Digite quantas unidades: \n");
+		scanf("%d", &quantidade);
+		
+		total=total+(preco*quantidade);
+		
+	}
+	while(n !=0);
+	return 0;
+}
