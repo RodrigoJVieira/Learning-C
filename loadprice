@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) 
+
+{
+   int codigo_uf, codigo_cn;
+   float peso_t, peso_kg, pre_cn, imposto, total, pre_kg;
+   
+  printf("Digite o codigo do Estado de origem\n");
+  scanf("%d", &codigo_uf);
+  printf("Digite o peso da carga em Toneladas\n");
+  scanf("%f", &peso_t);
+  printf("Digite o codigo de carga\n");
+  scanf("%d", &codigo_cn);
+  
+  peso_kg = peso_t*1000;
+  
+  if (codigo_cn >=10 && codigo_cn <=20)
+{
+  	pre_kg=180;
+}
+  if (codigo_cn >=21 && codigo_cn <=30)
+{
+  	pre_kg=120;
+}
+  if(codigo_cn >=31 && codigo_cn<=40)
+{
+    pre_kg=230;
+	  }	
+  if(codigo_cn <10 || codigo_cn>40)
+{
+  
+  printf("Codigo da carga invalido");
+}
+pre_cn=peso_kg*pre_kg;
+switch (codigo_uf)
+{
+	case 1:
+	imposto=pre_cn*0.2;
+	total=pre_cn*1.2;
+	printf("O peso da carga em quilos e de %.2f\n O preco da carga e de %.2f", peso_kg, pre_cn, imposto, total);
+	break;
+	case 2:
+	imposto=pre_cn*0.15;
+	total=pre_cn*1.15;
+	printf("O peso da carga em quilos e de %.2f\n O preco da carga e de %.2f", peso_kg, pre_cn, imposto, total);
+	break;
+	case 3:
+	imposto=pre_cn*0.1;
+	total=pre_cn*1.1;
+	printf("O peso da carga em quilos e de %.2f\n O preco da carga e de %.2f", peso_kg, pre_cn, imposto, total);
+	break;
+	case 4:
+	imposto=pre_cn*0.05;
+	total=pre_cn*1.05;
+	printf("O peso da carga em quilos e de %.2f\n O preco da carga e de %.2f", peso_kg, pre_cn, imposto, total);
+	break;
+	
+	default: printf("Codigo de estado invalido");
+}
+
+	return 0;
+}
