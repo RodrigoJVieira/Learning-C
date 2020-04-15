@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int  num, i;
+	
+	
+	
+	for(i=0; i<500; i++){
+		if(i>200){
+			if(i%2!=0){
+			
+			num+=i;
+		}
+		}
+	}
+	
+	printf ("\n Soma e de %d", num);
+	
+	return 0;
+}
