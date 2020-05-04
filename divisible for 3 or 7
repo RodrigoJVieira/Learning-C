@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	int num;
+	
+	printf("Digite um numero pra te dizer se e divisivel por 3 ou 7:");
+	scanf("%d", &num);
+	if(num%3==0)
+	printf("\n O numero %d e divisivel por 3", num);
+	else 
+	printf("\n O numero %d nao e divisivel por 3", num);
+	 
+	if(num%7==0)
+	printf("\n O numero %d e divisivel por 7",num);
+	
+	else
+	printf("\n O numero %d nao e divisivel por 7",num); 
+	 
+	 return(0);
+}
