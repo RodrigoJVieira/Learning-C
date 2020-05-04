@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int n, maior, menor, pares, impares;
+	float media, soma, i;
+	impares=0;
+	pares=0;
+	menor=2147483647;
+	i=0;
+	
+	while(n!=0)
+	{
+		printf("Escolha outro numero:");
+		scanf("%d",&n);
+		soma+=n;
+
+		if (n!=0){
+		
+		i++;
+		
+			if(n % 2==0){
+				pares++;
+			}
+			if(n % 2!=0){
+				impares++;
+			}
+			if(n>maior){
+				maior=n;
+			}
+			if(n<menor){
+				menor=n;
+			}
+		}	
+	}
+	
+	media = soma/i;
+	printf("\n A media de todos os numeros digitados e de: %.2f", media);
+	printf("\n O numero de valores pares foi de: %d", pares);
+	printf("\n O numero de valores impares foi de :%d", impares);
+    printf("\n O menor numero digitado e %d, e o maior e o %d.", menor, maior);
+	
+	return 0;
+}
